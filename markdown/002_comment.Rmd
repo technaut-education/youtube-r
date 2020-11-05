@@ -1,0 +1,32 @@
+---
+title: "Mengambil Data Komentar Pada Suatu Video"
+author: "Technaut Education"
+output: html_document
+---
+
+```{r}
+# Install Library
+install.packages(c("tuber", "readr"))
+```
+
+```{r}
+# Load library
+library(tuber)
+library(readr)
+```
+
+```{r}
+# Masukkan kode autenfikasi
+yt_oauth("USER-ID",
+         "TOKEN")
+```
+
+```{r}
+# Mendapatkan komen dari Sebuah Video
+df_comment <- get_all_comments("Hh0ioHFszOo")
+```
+
+```{r}
+# Simpan data komen dengan format .csv
+write_csv(df_comment, "data/data-comment.csv")
+```

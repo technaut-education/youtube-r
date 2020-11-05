@@ -1,0 +1,32 @@
+---
+title: "Mengambil Data Video Berdasarkan Keyword"
+author: "Technaut Education"
+output: html_document
+---
+
+```{r}
+# Install Library
+install.packages(c("tuber", "readr"))
+```
+
+```{r}
+# Load library
+library(tuber)
+library(readr)
+```
+
+```{r}
+# Masukkan kode autenfikasi
+yt_oauth("USER-ID",
+         "TOKEN")
+```
+
+```{r}
+# Mencari daftar Video, Ganti term dengan keyword yang ingin dicari
+df_video <- yt_search(term = "Gojek")
+```
+
+```{r}
+# Simpan data video dengan format .csv
+write_csv(df_video, "data/data-video.csv")
+```
