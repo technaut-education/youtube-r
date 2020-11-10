@@ -1,2 +1,2 @@
-# youtube-r
-Materi mengambil data Youtube menggunakan R
+# Mengambil Data Twitter Menggunakan R
+Bagian dari materi Social Media Analytics Workshop - Technaut Education
